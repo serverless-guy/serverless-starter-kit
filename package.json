@@ -1,0 +1,51 @@
+{
+  "name": "serverless-starter-kit",
+  "version": "1.0.0",
+  "description": "serverless project starter pack",
+  "sideEffects": false,
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/serverless-guy/serverless-starter-kit"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run coverage",
+    "mocha": "./node_modules/.bin/mocha test/**/*.test.ts",
+    "lint": "./node_modules/.bin/eslint . --ext .ts",
+    "coverage": "nyc npm run mocha",
+    "develop": "sls offline --stage develop"
+  },
+  "keywords": [],
+  "author": "Jacob Baring <so@tfwno.gf>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.36",
+    "@types/chai": "4.2.5",
+    "@types/chai-as-promised": "7.1.2",
+    "@types/mocha": "5.2.7",
+    "@types/node": "12.12.14",
+    "@typescript-eslint/eslint-plugin": "2.9.0",
+    "@typescript-eslint/parser": "2.9.0",
+    "aws-sdk": "2.580.0",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "eslint": "6.7.1",
+    "mocha": "6.2.2",
+    "mocha-webpack": "^1.1.0",
+    "nock": "11.7.0",
+    "nyc": "14.1.1",
+    "serverless": "1.58.0",
+    "serverless-offline": "^5.12.0",
+    "serverless-prune-plugin": "1.4.1",
+    "serverless-webpack": "5.3.1",
+    "ts-loader": "6.2.1",
+    "ts-node": "8.5.3",
+    "typescript": "3.7.2",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10",
+    "webpack-node-externals": "1.7.2"
+  },
+  "dependencies": {
+    "@serverless-guy/lambda": "2.2.10"
+  }
+}

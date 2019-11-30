@@ -1,0 +1,32 @@
+service: ${self:provider.environment.service}
+
+package:
+  individually: true
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+  - serverless-prune-plugin
+
+provider:
+  name:     "aws"
+  runtime:  "nodejs12.x"
+  region:   ${self:provider.environment.region}
+  stage:    ${self:custom.stage}
+  logRetentionInDays: "365"
+  environment: ${file(env.yml):${self:custom.stage}}
+  apiKeys:
+    - ${self:provider.environment.service}-${self:provider.stage}-key
+
+custom:
+  stage: ${opt:stage, "develop"}
+  prune:
+    automatic: true
+    number: 3
+  webpack:
+    includeModules:
+      forceExclude:
+        - "aws-sdk"
+
+functions:
+  - ${file(./src/handlers/config.yml)}
