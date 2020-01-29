@@ -21,7 +21,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@types/aws-lambda": "8.10.37",
-    "@types/chai": "4.2.7",
+    "@types/chai": "4.2.8",
     "@types/chai-as-promised": "7.1.2",
     "@types/mocha": "5.2.7",
     "@types/node": "13.1.7",
