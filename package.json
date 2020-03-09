@@ -45,6 +45,6 @@
     "webpack-node-externals": "1.7.2"
   },
   "dependencies": {
-    "@serverless-guy/lambda": "2.2.16"
+    "@serverless-guy/lambda": "2.3.0"
   }
 }
